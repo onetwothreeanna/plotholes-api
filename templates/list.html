@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+   <body>
+
+      <table border = 1>
+         <thead>
+            <td>Release Year</td>
+            <td>Title </td>
+            <td>Origin/Ethnicity</td>
+            <td>Director</td>
+            <td>Cast</td>
+            <td>Genre</td>
+            <td>Wiki Page</td>
+            <td>Plot</td>
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["Release Year"]}}</td>
+               <td>{{row["Title"]}}</td>
+               <td>{{ row["Origin/Ethnicity"]}}</td>
+               <td>{{row['Director']}}</td>	
+               <td>{{row['Cast']}}</td>	
+               <td>{{row['Genre']}}</td>	
+               <td>{{row['Wiki Page']}}</td>	
+               <td>{{row['Plot']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>
