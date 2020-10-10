@@ -71,8 +71,8 @@ def updatemovie(movie_id):
 
             with sql.connect("database.db") as con:
                 cur = con.cursor()
-                cur.execute("""UPDATE Movies SET ReleaseYear=%s, Title=%s, OriginEthnicity=%s, Director=%s, Cast=%s, Genre=%s, WikiPage=%s, Plot=%s WHERE Index=%s
-                    """, (release, title, origin_eth, director, cast, genre, wiki, plot, movie_id))
+                cur.execute("UPDATE Movies SET ReleaseYear=?, Title=?, OriginEthnicity=?, Director=?, Cast=?, Genre=?, WikiPage=?, Plot=? WHERE `Index`=?",
+                            (release, title, origin_eth, director, cast, genre, wiki, plot, movie_id))
                 con.commit()
             return updated_movie, 200
         except:
