@@ -22,13 +22,14 @@ def addmovie():
             wiki = movie['WikiPage']
             plot = movie['Plot']
 
+            new_movie = request.get_json()
             with sql.connect("database.db") as con:
                 cur = con.cursor()
                 cur.execute("""INSERT INTO Movies(ReleaseYear, Title, OriginEthnicity, Director, Cast, Genre, WikiPage, Plot)
                             VALUES(?, ?, ?, ?, ?, ?, ?, ?)""", (release, title, origin_eth, director, cast, genre, wiki, plot))
 
                 con.commit()
-                return 'Done', 201
+                return new_movie, 201
         except:
             con.rollback()
             return 'Error', 500
