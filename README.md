@@ -1,6 +1,6 @@
 An Uncomfortable Confession:
 
-This is embarrassing, but I misunderstood the gist of this challenge. I took "you can use anything" to mean any tech stack. This was completly my misunderstanding, and I feel really silly about this in retrospect. Since I’ve also been learning GoLang for work, I did the bulk of my studying/preparation for this in Node/Express because I am already familiar with it.
+This is embarrassing, but I misunderstood the gist of this challenge. I took "you can use anything" to mean any tech stack. This was completely my misunderstanding, and I feel really silly about this in retrospect. Since I’ve also been learning GoLang for work, I did the bulk of my studying/preparation for this in Node/Express because I am already familiar with it.
 
 So full disclosure, I’ve used just about the entirety of Google to put together this project in Python/Flask (and to learn both on the fly over the last 18 hours). I completely understand if what I’ve completed means I won’t move forward as a candidate, but I've learned SO MUCH and I’m grateful to have had this chance to challenge myself with a new language and framework!
 
