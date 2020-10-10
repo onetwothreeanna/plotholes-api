@@ -28,6 +28,7 @@ sql_connection.close()
 @app.route('/addmovie', methods=['POST'])
 def addmovie():
     if request.method == 'POST':
+        # TODO generate id for Index column
         try:
             movie = request.get_json()
             release = movie['ReleaseYear']
@@ -85,6 +86,7 @@ def updatemovie(movie_id):
 @app.route('/movies/<movie_id>', methods=['DELETE'])
 def deletemovie(movie_id):
     if request.method == 'DELETE':
+        # TODO Delete does not work for movie_ids that are 2 digits.  ex movie_id = 1 works; movie_id=10 does not
         try:
             with sql.connect("database.db") as con:
                 cur = con.cursor()
