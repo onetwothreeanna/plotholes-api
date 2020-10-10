@@ -88,8 +88,6 @@ def deletemovie(movie_id):
         try:
             with sql.connect("database.db") as con:
                 cur = con.cursor()
-                # delete_sql = """DELETE FROM Movies WHERE Index=%s"""
-                # cur.execute(delete_sql, (int(movie_id)))
                 cur.execute("DELETE FROM Movies WHERE `Index`=?", (movie_id))
                 con.commit()
             return 'Done', 200
