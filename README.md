@@ -53,7 +53,7 @@ https://medium.com/@imranhsayed/simple-react-js-pagination-using-react-hooks-e58
 ToDos Left:
 
 - 2 remaining bugs (noted by TODOs in app.py) - adding a unique ID when creating, and Delete not working for Index numbers greater than 9(??)
-- Unit / Integration tests (Sometimes I like to use TDD but didn't want to use time to learn it in Python for this, and code coverage is important to me)
+- Unit / Integration tests (bummed I didn't get any written for this)
 - Refactoring so data handling is less clunky (use Models instead)
 
 - Filter by all columns
