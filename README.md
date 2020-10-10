@@ -50,17 +50,16 @@ I added a pagination component to handle the large quantity of data in the UI us
 
 https://medium.com/@imranhsayed/simple-react-js-pagination-using-react-hooks-e58463ed191
 
-Backend ToDos Left:
+ToDos Left:
 
 - 2 remaining bugs (noted by TODOs in app.py) - adding a unique ID when creating, and Delete not working for Index numbers greater than 9(??)
 - Unit / Integration tests (Sometimes I like to use TDD but didn't want to use time to learn it in Python for this, and code coverage is important to me)
 - Refactoring so data handling is less clunky (use Models instead)
 
-Frontend ToDos Left:
-
 - Filter by all columns
 - Snackbar with confirmation and error messages
 - More dynamic UI to accomodate large blocks of text
+- Deploy stack to Heroku or using Docker/Blue Ocean
 
 Quick Demo screen recording of the app running locally:
 https://www.youtube.com/watch?v=4gdXFmip0N0
