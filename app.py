@@ -1,11 +1,6 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify
 import sqlite3 as sql
 app = Flask(__name__)
-
-
-@app.route('/')
-def home():
-    return render_template('home.html')
 
 
 @app.route('/addmovie', methods=['POST', 'GET'])
