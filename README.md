@@ -59,6 +59,7 @@ ToDos Left:
 - Filter by all columns
 - Snackbar with confirmation and error messages
 - More dynamic UI to accomodate large blocks of text
+- Clean up unneeded deps / node_modules / local files
 - Deploy stack to Heroku or using Docker/Blue Ocean
 
 Quick Demo screen recording of the app running locally:
