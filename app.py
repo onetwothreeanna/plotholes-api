@@ -12,7 +12,7 @@ updated_df = data_frame.rename(columns={"Release Year": "ReleaseYear",
                                         "Wiki Page": "WikiPage"
                                         })
 
-# Clear db if exists so data is fresh when app restarts
+# Clear db if exists so data is fresh every time app restarts
 if os.path.exists('database.db'):
     os.remove('database.db')
 
@@ -71,8 +71,7 @@ def updatemovie(movie_id):
 
             with sql.connect("database.db") as con:
                 cur = con.cursor()
-                cur.execute("""
-                    UPDATE Movies SET ReleaseYear=%s, Title=%s, OriginEthnicity=%s, Director=%s, Cast=%s, Genre=%s, WikiPage=%s, Plot=%s WHERE Index=%s
+                cur.execute("""UPDATE Movies SET ReleaseYear=%s, Title=%s, OriginEthnicity=%s, Director=%s, Cast=%s, Genre=%s, WikiPage=%s, Plot=%s WHERE Index=%s
                     """, (release, title, origin_eth, director, cast, genre, wiki, plot, movie_id))
                 con.commit()
             return updated_movie, 200
@@ -89,9 +88,11 @@ def deletemovie(movie_id):
         try:
             with sql.connect("database.db") as con:
                 cur = con.cursor()
-                cur.execute("DELETE from Movies WHERE Index=0")
+                # delete_sql = """DELETE FROM Movies WHERE Index=%s"""
+                # cur.execute(delete_sql, (int(movie_id)))
+                cur.execute("DELETE FROM Movies WHERE `Index`=?", (movie_id))
                 con.commit()
-            return 200
+            return 'Done', 200
         except:
             con.rollback()
             return 'Error', 500
@@ -99,7 +100,7 @@ def deletemovie(movie_id):
             con.close()
 
 
-@app.route('/all')
+@ app.route('/all')
 def list():
     con = sql.connect("database.db")
     con.row_factory = sql.Row
