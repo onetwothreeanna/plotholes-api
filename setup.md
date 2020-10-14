@@ -1,5 +1,5 @@
 # Environment Info
-**IDE:**  Visual Studio Code 1.50.0 (can also be done from Command Line)\
+**IDE:**  Visual Studio Code 1.50.0 (can also be done from Command Line in virtual env with Python 3.9.0)\
 **Virtual Environment Info**:  Python 3.9.0 64-bit \
 **Path:**  /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 \
 **OS:** Mac 10.15.6 Catalina 
