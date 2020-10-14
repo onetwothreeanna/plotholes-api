@@ -1,6 +1,6 @@
 # Environment Info
 **IDE:**  Visual Studio Code 1.50.0\
-**Virtual Environment for VSCode:**  Python 3.9.0 64-bit \
+**Virtual Environment Info**  Python 3.9.0 64-bit \
 **Path:**  /Library/Frameworks/Python.framework/Versions/3.9/bin/python3 \
 **OS:** Mac 10.15.6 Catalina 
 
@@ -10,11 +10,13 @@ I used the following links to familiarize myself with setting up a Python virtua
 [Visual Studio guide to selecting & activating envs](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment)
 
 # Start the API
-1)  In VSCode, clone API repo:
+1) Clone API repo:
 https://github.com/onetwothreeanna/plotholes-api
 
-2)  In commandline, to start the server:
+2)  Navigate to project in terminal.
+
+3)  To start the server:
 ``` python app.py ``` \
-_VSCode should detect and apply Python 3.9.0 env_
+_If opening in VSCode, IDE should detect and apply Python 3.9.0 env_
 
 3) SQLite database.db will initialize when the app starts.
